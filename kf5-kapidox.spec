@@ -9,7 +9,7 @@
 Summary:	Kapidox
 Name:		kf5-%{orgname}
 Version:	5.0.0
-Release:	0.3
+Release:	0.4
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/frameworks/%{version}/%{orgname}-%{version}.tar.xz
