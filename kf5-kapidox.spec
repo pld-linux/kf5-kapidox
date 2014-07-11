@@ -26,6 +26,8 @@ BuildRequires:	kf5-extra-cmake-modules >= 1.0.0
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	sphinx-pdg
+BuildRequires:	tar >= 1:1.22
+BuildRequires:	xz
 Requires:	graphviz
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
