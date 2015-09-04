@@ -2,17 +2,17 @@
 # - runtime Requires if any
 # - python3 version
 # - .pyo etc
-%define         kdeframever     5.10
+%define         kdeframever     5.13
 %define         qtver           5.3.2
 %define         kfname          kapidox
 Summary:	Kapidox
 Name:		kf5-%{kfname}
-Version:	5.10.0
+Version:	5.13.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	75885e5ea056b9b9a4245de39e438b92
+# Source0-md5:	145d1c604e3db2a61a7174430ac25144
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= 5.2.0
 BuildRequires:	Qt5DBus-devel >= 5.2.0
@@ -72,3 +72,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/kgenframeworksapidox
 %{py_sitescriptdir}/kapidox
 %{py_sitescriptdir}/kapidox-*.egg-info
+%{_mandir}/man1/depdiagram-generate-all.1*
+%{_mandir}/man1/depdiagram-generate.1*
+%{_mandir}/man1/depdiagram-prepare.1*
+%{_mandir}/man1/kgenapidox.1*
+%{_mandir}/man1/kgenframeworksapidox.1*
+
