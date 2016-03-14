@@ -8,7 +8,7 @@
 Summary:	Kapidox
 Name:		kf5-%{kfname}
 Version:	5.19.0
-Release:	2
+Release:	3
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
