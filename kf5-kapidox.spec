@@ -2,7 +2,7 @@
 # - runtime Requires if any
 # - python3 version
 # - .pyo etc
-%define         kdeframever     5.23
+%define         kdeframever     5.24
 %define         qtver           5.3.2
 %define         kfname          kapidox
 Summary:	Kapidox
