@@ -7,7 +7,7 @@
 %define         kfname          kapidox
 Summary:	Kapidox
 Name:		kf5-%{kfname}
-Version:	5.23.0
+Version:	5.24.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
