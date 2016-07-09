@@ -2,17 +2,17 @@
 # - runtime Requires if any
 # - python3 version
 # - .pyo etc
-%define         kdeframever     5.19
+%define         kdeframever     5.23
 %define         qtver           5.3.2
 %define         kfname          kapidox
 Summary:	Kapidox
 Name:		kf5-%{kfname}
-Version:	5.19.0
-Release:	3
+Version:	5.23.0
+Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	ed50b3908baef964e14266477133e3ea
+# Source0-md5:	3ed25b2b4393a107da6981cee61ddc14
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= 5.2.0
 BuildRequires:	Qt5DBus-devel >= 5.2.0
@@ -28,6 +28,7 @@ BuildRequires:	sphinx-pdg
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 Requires:	graphviz
+Requires:	kf5-dirs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		qt5dir		%{_libdir}/qt5
@@ -67,8 +68,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/depdiagram-generate
 %attr(755,root,root) %{_bindir}/depdiagram-generate-all
 %attr(755,root,root) %{_bindir}/depdiagram-prepare
-%attr(755,root,root) %{_bindir}/kgenapidox
-%attr(755,root,root) %{_bindir}/kgenframeworksapidox
+%attr(755,root,root) %{_bindir}/kapidox_generate
+#%%attr(755,root,root) %{_bindir}/kgenapidox
+#%%attr(755,root,root) %{_bindir}/kgenframeworksapidox
 %{py_sitedir}/kapidox
 %{py_sitedir}/kapidox-*.egg-info
 %{_mandir}/man1/depdiagram-generate-all.1*
