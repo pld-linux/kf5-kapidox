@@ -76,5 +76,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/depdiagram-generate-all.1*
 %{_mandir}/man1/depdiagram-generate.1*
 %{_mandir}/man1/depdiagram-prepare.1*
-%{_mandir}/man1/kgenapidox.1*
-%{_mandir}/man1/kgenframeworksapidox.1*
+#%%{_mandir}/man1/kgenapidox.1*
+#%%{_mandir}/man1/kgenframeworksapidox.1*
