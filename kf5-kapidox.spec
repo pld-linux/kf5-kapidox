@@ -2,17 +2,17 @@
 # - runtime Requires if any
 # - python3 version
 # - .pyo etc
-%define         kdeframever     5.56
-%define         qtver           5.9.0
-%define         kfname          kapidox
+%define		kdeframever	5.59
+%define		qtver		5.9.0
+%define		kfname		kapidox
 Summary:	Kapidox
 Name:		kf5-%{kfname}
-Version:	5.56.0
+Version:	5.59.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	d6d7a6c003dfdc22c5b9671af3985af4
+# Source0-md5:	ee64475b088be9b404aadbb3387e8102
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= 5.2.0
 BuildRequires:	Qt5DBus-devel >= 5.2.0
