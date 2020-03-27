@@ -59,6 +59,11 @@ cd build
 rm -rf $RPM_BUILD_ROOT
 %ninja_install -C build
 
+%{__sed} -E -i -e '1s,#!\s*/usr/bin/python(\s|$),#!%{__python}\1,' \
+      $RPM_BUILD_ROOT%{_bindir}/depdiagram-generate \
+      $RPM_BUILD_ROOT%{_bindir}/depdiagram-prepare \
+      $RPM_BUILD_ROOT%{_bindir}/kapidox_generate
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
