@@ -8,7 +8,7 @@
 Summary:	Kapidox
 Name:		kf5-%{kfname}
 Version:	5.84.0
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
@@ -64,12 +64,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/depdiagram-generate-all
 %attr(755,root,root) %{_bindir}/depdiagram-prepare
 %attr(755,root,root) %{_bindir}/kapidox_generate
-#%%attr(755,root,root) %{_bindir}/kgenapidox
-#%%attr(755,root,root) %{_bindir}/kgenframeworksapidox
-#%{py3_sitedir}/kapidox
-#%{py3_sitedir}/kapidox-*.egg-info
+%{py3_sitescriptdir}/kapidox/
+%{py3_sitescriptdir}/kapidox-*.egg-info
 %{_mandir}/man1/depdiagram-generate-all.1*
 %{_mandir}/man1/depdiagram-generate.1*
 %{_mandir}/man1/depdiagram-prepare.1*
-#%%{_mandir}/man1/kgenapidox.1*
-#%%{_mandir}/man1/kgenframeworksapidox.1*
