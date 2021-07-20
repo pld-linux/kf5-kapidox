@@ -30,6 +30,7 @@ BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 Requires:	graphviz
 Requires:	kf5-dirs
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		qt5dir		%{_libdir}/qt5
@@ -48,22 +49,11 @@ template for the generated documentation.
 %setup -q -n %{kfname}-%{version}
 
 %build
-install -d build
-cd build
-%cmake -G Ninja \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
-	-DPYTHON_EXECUTABLE=%{__python3} \
-	..
-%ninja_build
+%py3_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%ninja_install -C build
-
-%{__sed} -E -i -e '1s,#!\s*/usr/bin/python(\s|$),#!%{__python}\1,' \
-      $RPM_BUILD_ROOT%{_bindir}/depdiagram-generate \
-      $RPM_BUILD_ROOT%{_bindir}/depdiagram-prepare \
-      $RPM_BUILD_ROOT%{_bindir}/kapidox_generate
+%py3_install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -76,8 +66,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/kapidox_generate
 #%%attr(755,root,root) %{_bindir}/kgenapidox
 #%%attr(755,root,root) %{_bindir}/kgenframeworksapidox
-%{py3_sitedir}/kapidox
-%{py3_sitedir}/kapidox-*.egg-info
+#%{py3_sitedir}/kapidox
+#%{py3_sitedir}/kapidox-*.egg-info
 %{_mandir}/man1/depdiagram-generate-all.1*
 %{_mandir}/man1/depdiagram-generate.1*
 %{_mandir}/man1/depdiagram-prepare.1*
