@@ -2,17 +2,17 @@
 # - runtime Requires if any
 # - python3 version
 # - .pyo etc
-%define		kdeframever	5.91
+%define		kdeframever	5.92
 %define		qtver		5.9.0
 %define		kfname		kapidox
 Summary:	Kapidox
 Name:		kf5-%{kfname}
-Version:	5.91.0
+Version:	5.92.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	f2a6670f535225cee132b0862af157ad
+# Source0-md5:	77bf71bbff077ba5be06e7882cb922e0
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= 5.2.0
 BuildRequires:	Qt5DBus-devel >= 5.2.0
@@ -60,12 +60,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/depdiagram-generate
-%attr(755,root,root) %{_bindir}/depdiagram-generate-all
-%attr(755,root,root) %{_bindir}/depdiagram-prepare
-%attr(755,root,root) %{_bindir}/kapidox_generate
+%attr(755,root,root) %{_bindir}/depdiagram_generate_all
+%attr(755,root,root) %{_bindir}/kapidox-depdiagram-generate
+%attr(755,root,root) %{_bindir}/kapidox-depdiagram-prepare
+%attr(755,root,root) %{_bindir}/kapidox-generate
 %{py3_sitescriptdir}/kapidox/
 %{py3_sitescriptdir}/kapidox-*.egg-info
-%{_mandir}/man1/depdiagram-generate-all.1*
-%{_mandir}/man1/depdiagram-generate.1*
-%{_mandir}/man1/depdiagram-prepare.1*
