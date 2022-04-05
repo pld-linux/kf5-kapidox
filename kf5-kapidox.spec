@@ -1,3 +1,6 @@
+#
+# Conditional build:
+%bcond_with	tests		# build with tests
 # TODO:
 # - runtime Requires if any
 # - python3 version
