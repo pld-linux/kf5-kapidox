@@ -5,24 +5,23 @@
 # - runtime Requires if any
 # - python3 version
 # - .pyo etc
-%define		kdeframever	5.114
+%define		kdeframever	5.249.0
 %define		qtver		5.15.2
 %define		kfname		kapidox
 Summary:	Kapidox
 Name:		kf5-%{kfname}
-Version:	5.114.0
-Release:	1
+Version:	5.249.0
+Release:	0.1
 License:	LGPL v2.1+
 Group:		X11/Libraries
-Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	975ebf3ea8525381c52e021dd3367f02
+Source0:	https://download.kde.org/unstable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
+# Source0-md5:	d08881f3d846bec71d5ef003105e08aa
 URL:		http://www.kde.org/
-BuildRequires:	Qt5Core-devel >= 5.2.0
-BuildRequires:	Qt5DBus-devel >= 5.2.0
-BuildRequires:	Qt5Gui-devel >= 5.3.1
-BuildRequires:	Qt5Test-devel
-BuildRequires:	Qt5Widgets-devel >= 5.2.0
-BuildRequires:	Qt5X11Extras-devel >= 5.2.0
+BuildRequires:	Qt6Core-devel >= 5.2.0
+BuildRequires:	Qt6DBus-devel >= 5.2.0
+BuildRequires:	Qt6Gui-devel >= 5.3.1
+BuildRequires:	Qt6Test-devel
+BuildRequires:	Qt6Widgets-devel >= 5.2.0
 BuildRequires:	cmake >= 3.16
 BuildRequires:	kf5-extra-cmake-modules >= %{version}
 BuildRequires:	ninja
@@ -36,7 +35,7 @@ Requires:	kf5-dirs
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		qt5dir		%{_libdir}/qt5
+%define		qt6dir		%{_libdir}/qt6
 
 %description
 This framework contains scripts and data for building API
